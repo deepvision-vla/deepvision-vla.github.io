@@ -54,6 +54,43 @@ function scrollToTop() {
     });
 }
 
+function setupDemoVideoAutoplay() {
+    const videos = document.querySelectorAll('.demo-video');
+
+    if (videos.length === 0) {
+        return;
+    }
+
+    videos.forEach(function(video) {
+        video.muted = true;
+    });
+
+    if (!('IntersectionObserver' in window)) {
+        videos.forEach(function(video) {
+            video.play().catch(function() {});
+        });
+        return;
+    }
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            const video = entry.target;
+
+            if (entry.isIntersecting) {
+                video.play().catch(function() {});
+            } else {
+                video.pause();
+            }
+        });
+    }, {
+        threshold: 0.35
+    });
+
+    videos.forEach(function(video) {
+        observer.observe(video);
+    });
+}
+
 window.addEventListener('scroll', function() {
     const scrollButton = document.querySelector('.scroll-to-top');
 
@@ -66,4 +103,8 @@ window.addEventListener('scroll', function() {
     } else {
         scrollButton.classList.remove('visible');
     }
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    setupDemoVideoAutoplay();
 });

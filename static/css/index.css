@@ -348,18 +348,29 @@ body {
   max-width: 1180px;
 }
 
+.demo-section {
+  max-width: 1440px;
+}
+
 .demo-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
 }
 
 .demo-card {
-  padding: 1rem;
+  padding: 1.15rem;
   border-radius: 22px;
   border: 1px solid rgb(15 23 42 / 0.08);
   background: rgb(255 255 255 / 0.88);
   box-shadow: var(--shadow-md);
+}
+
+.demo-card:last-child {
+  grid-column: 1 / -1;
+  max-width: 860px;
+  width: 100%;
+  justify-self: center;
 }
 
 .demo-card h3 {
@@ -381,6 +392,7 @@ body {
   border-radius: 18px;
   background: #020617;
   box-shadow: var(--shadow-md);
+  object-fit: cover;
 }
 
 .video-placeholder {
