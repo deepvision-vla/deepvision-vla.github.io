@@ -56,6 +56,7 @@ function scrollToTop() {
 
 function setupDemoVideoAutoplay() {
     const videos = document.querySelectorAll('.demo-video');
+    const demoPlaybackRate = 3;
 
     if (videos.length === 0) {
         return;
@@ -63,6 +64,18 @@ function setupDemoVideoAutoplay() {
 
     videos.forEach(function(video) {
         video.muted = true;
+        video.defaultMuted = true;
+        video.defaultPlaybackRate = demoPlaybackRate;
+        video.playbackRate = demoPlaybackRate;
+
+        function enforcePlaybackRate() {
+            if (video.playbackRate !== demoPlaybackRate) {
+                video.playbackRate = demoPlaybackRate;
+            }
+        }
+
+        video.addEventListener('loadedmetadata', enforcePlaybackRate);
+        video.addEventListener('play', enforcePlaybackRate);
     });
 
     if (!('IntersectionObserver' in window)) {

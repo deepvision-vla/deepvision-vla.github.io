@@ -221,33 +221,60 @@
         <div class="container is-max-widescreen demo-section">
           <div class="has-text-centered section-header">
             <h2 class="title is-3">Demonstrations</h2>
-            <p class="subtitle is-5 section-subtitle">Generalization experiments under three variants of the same pouring task.</p>
           </div>
 
-          <div class="demo-grid">
-            <article class="demo-card">
-              <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/pour_cola_poster.jpg">
-                <source src="static/videos/pour_cola_3x.mp4" type="video/mp4">
-              </video>
-              <h3>Pour Cola</h3>
-              <p>3x speed playback of the standard pouring setup.</p>
-            </article>
+          <div class="demo-task">
+            <p class="demo-instruction-meta">Instruction</p>
+            <h3 class="demo-instruction">Pick up and place the banana and carrot into the plate</h3>
+            <div class="demo-grid">
+              <article class="demo-card">
+                <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/banana_plate_baseline_poster.jpg">
+                  <source src="static/videos/banana_plate_baseline.mp4" type="video/mp4">
+                </video>
+                <p class="demo-label">Baseline</p>
+              </article>
 
-            <article class="demo-card">
-              <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/pour_cola_flower_poster.jpg">
-                <source src="static/videos/pour_cola_flower_3x.mp4" type="video/mp4">
-              </video>
-              <h3>Pour Cola (Cluttered Scene)</h3>
-              <p>3x speed playback with an extra flower placed on the table as clutter.</p>
-            </article>
+              <article class="demo-card">
+                <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/banana_plate_cluttered_scene_poster.jpg">
+                  <source src="static/videos/banana_plate_cluttered_scene.mp4" type="video/mp4">
+                </video>
+                <p class="demo-label">Cluttered Scene</p>
+              </article>
 
-            <article class="demo-card">
-              <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/pour_cola_light_poster.jpg">
-                <source src="static/videos/pour_cola_light_3x.mp4" type="video/mp4">
-              </video>
-              <h3>Pour Cola (Visual Distraction)</h3>
-              <p>3x speed playback under colored lighting interference.</p>
-            </article>
+              <article class="demo-card">
+                <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/banana_plate_visual_distraction_poster.jpg">
+                  <source src="static/videos/banana_plate_visual_distraction.mp4" type="video/mp4">
+                </video>
+                <p class="demo-label">Visual Distraction</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="demo-task">
+            <p class="demo-instruction-meta">Instruction</p>
+            <h3 class="demo-instruction">Pour Cola</h3>
+            <div class="demo-grid">
+              <article class="demo-card">
+                <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/pour_cola_baseline_poster.jpg">
+                  <source src="static/videos/pour_cola_baseline.mp4" type="video/mp4">
+                </video>
+                <p class="demo-label">Baseline</p>
+              </article>
+
+              <article class="demo-card">
+                <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/pour_cola_cluttered_scene_poster.jpg">
+                  <source src="static/videos/pour_cola_cluttered_scene.mp4" type="video/mp4">
+                </video>
+                <p class="demo-label">Cluttered Scene</p>
+              </article>
+
+              <article class="demo-card">
+                <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/pour_cola_visual_distraction_poster.jpg">
+                  <source src="static/videos/pour_cola_visual_distraction.mp4" type="video/mp4">
+                </video>
+                <p class="demo-label">Visual Distraction</p>
+              </article>
+            </div>
           </div>
         </div>
       </div>
