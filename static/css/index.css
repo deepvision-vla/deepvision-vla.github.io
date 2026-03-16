@@ -288,6 +288,10 @@ body {
   max-width: 1320px;
 }
 
+.teaser-figure {
+  max-width: 1560px;
+}
+
 .paper-figure img {
   width: 100%;
   border-radius: 20px;
@@ -345,7 +349,7 @@ body {
 }
 
 .method-figure {
-  max-width: 1380px;
+  max-width: 1640px;
 }
 
 .demo-section {
