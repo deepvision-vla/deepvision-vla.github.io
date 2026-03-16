@@ -394,8 +394,8 @@ body {
 .demo-label {
   margin: 0.6rem 0 0;
   text-align: center;
-  font-size: 0.96rem;
-  font-weight: 700;
+  font-size: 1.06rem;
+  font-weight: 800;
   color: var(--text-primary);
 }
 
