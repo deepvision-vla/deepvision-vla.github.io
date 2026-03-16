@@ -279,16 +279,6 @@ body {
   background: #475569 !important;
 }
 
-.top-note {
-  margin-top: 0.8rem;
-  color: var(--text-light);
-  font-size: 0.92rem;
-}
-
-.top-note code {
-  background: rgb(15 23 42 / 0.06) !important;
-}
-
 .section-figure {
   padding-top: 1rem;
 }
