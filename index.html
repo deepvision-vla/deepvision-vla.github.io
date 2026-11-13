@@ -16,10 +16,10 @@
   <meta property="og:title" content="Look Before Acting: Enhancing Vision Foundation Representations for Vision-Language-Action Models">
   <meta property="og:description" content="DeepVision-VLA enhances visual grounding in Vision-Language-Action models with a vision-language mixture-of-transformers framework and action-guided visual pruning.">
   <meta property="og:url" content="https://deepvision-vla.github.io/">
-  <meta property="og:image" content="https://deepvision-vla.github.io/static/images/social_preview.png">
+  <meta property="og:image" content="https://deepvision-vla.github.io/static/images/social-preview-v2.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="DeepVision-VLA teaser figure">
+  <meta property="og:image:alt" content="DeepVision-VLA: Look Before Acting">
   <meta property="article:published_time" content="2026-03-16T00:00:00.000Z">
   <meta property="article:author" content="Yulin Luo">
   <meta property="article:section" content="Research">
@@ -29,8 +29,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Look Before Acting: Enhancing Vision Foundation Representations for Vision-Language-Action Models">
   <meta name="twitter:description" content="DeepVision-VLA enhances visual grounding in Vision-Language-Action models with a vision-language mixture-of-transformers framework and action-guided visual pruning.">
-  <meta name="twitter:image" content="https://deepvision-vla.github.io/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="DeepVision-VLA teaser figure">
+  <meta name="twitter:image" content="https://deepvision-vla.github.io/static/images/social-preview-v2.png">
+  <meta name="twitter:image:alt" content="DeepVision-VLA: Look Before Acting">
 
   <meta name="citation_title" content="Look Before Acting: Enhancing Vision Foundation Representations for Vision-Language-Action Models">
   <meta name="citation_author" content="Luo, Yulin">
@@ -50,24 +50,20 @@
   <meta name="citation_conference_title" content="Preprint">
   <meta name="citation_pdf_url" content="https://deepvision-vla.github.io/static/pdfs/paper.pdf">
 
-  <meta name="theme-color" content="#0f766e">
-  <meta name="msapplication-TileColor" content="#0f766e">
+  <meta name="theme-color" content="#2456d4">
+  <meta name="msapplication-TileColor" content="#2456d4">
 
-  <title>Look Before Acting | DeepVision-VLA</title>
+  <title>DeepVision-VLA | Look Before Acting</title>
 
-  <link rel="icon" type="image/png" href="static/images/social_preview.png">
-  <link rel="apple-touch-icon" href="static/images/social_preview.png">
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  </noscript>
+  <link rel="icon" href="static/images/deepvision-mark.svg" type="image/svg+xml">
+  <link rel="icon" href="static/images/deepvision-mark-32.png" sizes="32x32" type="image/png">
+  <link rel="shortcut icon" href="static/images/deepvision-favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/deepvision-mark-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/index.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/site.css">
+  <script defer src="static/js/site.js"></script>
 
   <script type="application/ld+json">
   {
@@ -96,7 +92,7 @@
       "name": "Preprint"
     },
     "url": "https://deepvision-vla.github.io/",
-    "image": "https://deepvision-vla.github.io/static/images/social_preview.png",
+    "image": "https://deepvision-vla.github.io/static/images/social-preview-v2.png",
     "keywords": [
       "Vision-Language-Action",
       "robot manipulation",
@@ -115,210 +111,100 @@
   </script>
 </head>
 <body>
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="DeepVision-VLA home"><img src="static/images/deepvision-mark.svg" width="34" height="34" alt=""><span>DeepVision-VLA</span></a>
+      <nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#diagnosis">Diagnosis</a><a href="#method">Method</a><a href="#results">Results</a><a href="#demonstrations">Demos</a></nav>
+      <a class="nav-code" href="https://github.com/yulin-luo/deepvision-vla" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
 
   <main id="main-content">
-    <section class="hero project-hero">
-      <div class="hero-body">
-        <div class="container is-max-desktop">
-          <div class="has-text-centered">
-            <h1 class="title is-1 publication-title">Look Before Acting: Enhancing Vision Foundation Representations for Vision-Language-Action Models</h1>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">Yulin Luo<sup>1*</sup>,</span>
-              <span class="author-block">Hao Chen<sup>3*&dagger;</sup>,</span>
-              <span class="author-block">Zhuangzhe Wu<sup>1*</sup>,</span>
-              <span class="author-block">Bowen Sui<sup>1*</sup>,</span>
-              <span class="author-block">Jiaming Liu<sup>1*&dagger;</sup>,</span>
-              <span class="author-block">Chenyang Gu<sup>1</sup>,</span>
-              <span class="author-block">Zhuoyang Liu<sup>1</sup>,</span>
-              <span class="author-block">Qiuxuan Feng<sup>1</sup>,</span>
-              <span class="author-block">Jiale Yu<sup>1</sup>,</span>
-              <span class="author-block">Shuo Gu<sup>2</sup>,</span>
-              <span class="author-block">Peng Jia<sup>2</sup>,</span>
-              <span class="author-block">Pheng-Ann Heng<sup>3</sup>,</span>
-              <span class="author-block">Shanghang Zhang<sup>1&#9993;</sup></span>
-            </div>
-
-            <div class="is-size-5 publication-authors publication-affiliations">
-              <span class="author-block"><sup>1</sup> State Key Laboratory of Multimedia Information Processing, School of Computer Science, Peking University</span>
-              <span class="author-block"><sup>2</sup> Simplexity Robotics</span>
-              <span class="author-block"><sup>3</sup> The Chinese University of Hong Kong</span>
-            </div>
-
-            <p class="author-note"><sup>*</sup> Equal contribution. <sup>&dagger;</sup> Project lead. <sup>&#9993;</sup> Corresponding author.</p>
-
-            <div class="publication-links project-actions">
-              <span class="link-block">
-                <a href="static/pdfs/paper.pdf" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2603.15618" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-book-open"></i></span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://github.com/yulin-luo/deepvision-vla" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Code</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://huggingface.co/lyl010221-pku/deepvision-vla-rlbench10" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-download"></i></span>
-                  <span>RLBench-10 Checkpoint</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://dl.acm.org/doi/10.1145/3767308.3835774" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-award"></i></span>
-                  <span>ACM MM 2026</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://deepvision-vla.github.io/static/pdfs/deepvision-vla-acmmm2026-poster.pdf" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Poster</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-quote-right"></i></span>
-                  <span>BibTeX</span>
-                </a>
-              </span>
-            </div>
-
-            <p class="is-size-6 mt-4">Inference and RLBench evaluation code and the RLBench-10 fine-tuned checkpoint are now available. Training code and embodied-pretraining checkpoints will follow.</p>
-
+    <section class="intro section-shell" id="top">
+      <div class="intro-grid">
+        <div class="intro-copy">
+          <a class="conference" href="https://dl.acm.org/doi/10.1145/3767308.3835774" target="_blank" rel="noopener noreferrer">ACM Multimedia 2026</a>
+          <h1>Look Before Acting<span>Enhancing Vision Foundation Representations for Vision-Language-Action Models</span></h1>
+          <p class="intro-summary">Bring task-relevant visual detail into deeper action layers, so robots stay grounded in what they see.</p>
+          <div class="resource-links" aria-label="Project resources">
+            <a class="button button-primary" href="https://dl.acm.org/doi/10.1145/3767308.3835774" target="_blank" rel="noopener noreferrer">Read the paper</a>
+            <a class="button" href="https://github.com/yulin-luo/deepvision-vla" target="_blank" rel="noopener noreferrer">Code</a>
+            <a class="button" href="https://huggingface.co/lyl010221-pku/deepvision-vla-rlbench10" target="_blank" rel="noopener noreferrer">Model</a>
+            <a class="button" href="static/pdfs/deepvision-vla-acmmm2026-poster.pdf" target="_blank" rel="noopener noreferrer">Poster</a>
           </div>
+          <div class="secondary-links"><a href="https://arxiv.org/abs/2603.15618" target="_blank" rel="noopener noreferrer">arXiv preprint</a><a href="#BibTeX">Cite this work</a></div>
         </div>
-      </div>
-    </section>
-
-    <section class="section section-figure">
-      <div class="container is-max-widescreen">
-        <figure class="paper-figure teaser-figure">
-          <img src="static/images/deepvision_teaser.png" alt="DeepVision-VLA teaser figure" loading="eager">
+        <figure class="hero-demo">
+          <div class="video-focus">
+            <video id="hero-video" playsinline muted loop controls preload="metadata" poster="static/images/pour_cola_baseline_poster.jpg" aria-label="DeepVision-VLA pouring demonstration">
+              <source src="static/videos/pour_cola_baseline_3x.mp4" type="video/mp4">
+            </video>
+            <span class="focus-corner corner-tl" aria-hidden="true"></span><span class="focus-corner corner-tr" aria-hidden="true"></span><span class="focus-corner corner-bl" aria-hidden="true"></span><span class="focus-corner corner-br" aria-hidden="true"></span>
+          </div>
+          <figcaption><span class="live-dot" aria-hidden="true"></span>Visual grounding for precise manipulation<a href="#demonstrations">Explore the demos</a></figcaption>
         </figure>
       </div>
+      <div class="authors-block">
+        <p class="authors">Yulin Luo<sup>1*</sup><span>Hao Chen<sup>3*†</sup></span><span>Zhuangzhe Wu<sup>1*</sup></span><span>Bowen Sui<sup>1*</sup></span><span>Jiaming Liu<sup>1*†</sup></span><span>Chenyang Gu<sup>1</sup></span><span>Zhuoyang Liu<sup>1</sup></span><span>Qiuxuan Feng<sup>1</sup></span><span>Jiale Yu<sup>1</sup></span><span>Shuo Gu<sup>2</sup></span><span>Peng Jia<sup>2</sup></span><span>Pheng-Ann Heng<sup>3</sup></span><span>Shanghang Zhang<sup>1✉</sup></span></p>
+        <p class="affiliations"><span><sup>1</sup> Peking University</span><span><sup>2</sup> Simplexity Robotics</span><span><sup>3</sup> The Chinese University of Hong Kong</span></p>
+        <p class="author-note">* Equal contribution &nbsp; † Project lead &nbsp; ✉ Corresponding author</p>
+      </div>
+      <div class="release-note"><span class="release-dot" aria-hidden="true"></span><p><strong>Inference and evaluation are open.</strong> Get the code and RLBench-10 checkpoint. Training code and embodied-pretraining weights will follow.</p><a href="https://github.com/yulin-luo/deepvision-vla" target="_blank" rel="noopener noreferrer">Get started</a></div>
     </section>
 
-    <section class="section hero is-light">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-            <h2 class="title is-3">Abstract</h2>
-            <div class="content has-text-justified is-readable">
-              <p>
-                Vision-Language-Action (VLA) models have recently emerged as a promising paradigm for robotic manipulation, in which reliable action prediction critically depends on accurately interpreting and integrating visual observations conditioned on language instructions. Although recent works have sought to enhance the visual capabilities of VLA models, most approaches treat the LLM backbone as a black box, providing limited insight into how visual information is grounded into action generation.
-              </p>
-              <p>
-                Therefore, we perform a systematic analysis of multiple VLA models across different action-generation paradigms and observe that sensitivity to visual tokens progressively decreases in deeper layers during action generation. Motivated by this observation, we propose <strong>DeepVision-VLA</strong>, built on a <strong>Vision-Language Mixture-of-Transformers (VL-MoT)</strong> framework.
-              </p>
-              <p>
-                This framework enables shared attention between the vision foundation model and the VLA backbone, injecting multi-scale visual features from the vision expert into deeper layers of the VLA backbone to enhance visual representations for precise and complex manipulation. In addition, we introduce <strong>Action-Guided Visual Pruning (AGVP)</strong>, which leverages shallow-layer attention to prune irrelevant visual tokens while preserving task-relevant ones, reinforcing critical visual cues for manipulation with minimal computational overhead.
-              </p>
-              <p>
-                DeepVision-VLA outperforms prior state-of-the-art methods by <code>xx%</code> and <code>xx%</code> on simulated and real-world tasks, respectively, providing new insights for the design of visually enhanced VLA models.
-              </p>
-            </div>
-          </div>
-        </div>
+    <section class="section-shell overview" id="overview">
+      <div class="section-heading"><div><h2>Vision should stay in focus.</h2><p>A vision expert refreshes the evidence that action prediction needs.</p></div><span class="section-name">Overview</span></div>
+      <figure class="research-figure"><button class="figure-button" data-lightbox="static/images/overview-final.png" aria-label="Expand the DeepVision-VLA overview"><img src="static/images/overview-final.png" alt="Comparison of a vanilla VLA with DeepVision-VLA, showing visual feature injection and real-world results" width="1964" height="740" loading="lazy"></button></figure>
+      <div class="overview-story"><p>A VLA can understand an instruction yet miss the object when it acts. Our analysis asks where task-relevant visual information becomes underused inside the model.</p><p><strong>DeepVision-VLA reconnects deep action layers with a high-resolution vision expert.</strong> Shallow action attention selects useful visual regions before this deeper fusion.</p></div>
+    </section>
+
+    <section class="diagnosis-section" id="diagnosis">
+      <div class="section-shell">
+        <div class="section-heading"><div><h2>Where does visual grounding weaken?</h2><p>Looking inside OpenVLA, π₀ and QwenVLA-OFT.</p></div><span class="section-name">Diagnosis</span></div>
+        <figure class="research-figure"><button class="figure-button" data-lightbox="static/images/diagnosis-final.png" aria-label="Expand visual sensitivity curves and contribution maps"><img src="static/images/diagnosis-final.png" alt="Paper analysis of visual-token masking sensitivity and gradient-based visual contribution across VLA layers" loading="lazy"></button><figcaption>Layer-wise ROI masking and visual contribution maps from the paper. Click the figure to inspect the details.</figcaption></figure>
+        <div class="diagnosis-findings"><div><h3>Shallow layers use visual evidence.</h3><p>Masking task-region tokens in shallow layers causes a larger increase in action error.</p></div><div><h3>Deep layers become less grounded.</h3><p>Visual contribution becomes less task-focused, while masking has a smaller effect.</p></div></div>
+        <p class="design-response"><strong>The design response:</strong> reinforce useful visual evidence where action prediction becomes less sensitive to it.</p>
       </div>
     </section>
 
-    <section class="section section-figure">
-      <div class="container is-max-widescreen">
-        <div class="has-text-centered section-header">
-          <h2 class="title is-3">Method</h2>
-        </div>
-        <figure class="paper-figure method-figure">
-          <img src="static/images/deepvision_method.png" alt="DeepVision-VLA method figure" loading="lazy">
-        </figure>
+    <section class="section-shell method-section" id="method">
+      <div class="section-heading"><div><h2>Reinforce vision. Preserve action detail.</h2><p>VL-MoT + Action-Guided Visual Pruning</p></div><span class="section-name">Method</span></div>
+      <figure class="research-figure"><button class="figure-button" data-lightbox="static/images/method-final.png" aria-label="Expand the model architecture"><img src="static/images/method-final.png" alt="DeepVision-VLA architecture: high-resolution DINOv3 features, action-guided token pruning, shared attention, and parallel action prediction" loading="lazy"></button></figure>
+      <div class="method-points">
+        <article><span class="method-symbol" aria-hidden="true">↳</span><h3>Multi-level visual injection</h3><p>Couple the last 16 DINOv3 layers with the deepest 16 VLA layers through shared attention.</p></article>
+        <article><span class="method-symbol prune-symbol" aria-hidden="true">⌁</span><h3>Action-guided selection</h3><p>Aggregate shallow action-to-vision attention and retain the most relevant 50% of expert tokens.</p></article>
+        <article><span class="method-symbol parallel-symbol" aria-hidden="true">⇉</span><h3>Parallel action decoding</h3><p>Preserve the expert and VLA pathways, then map action-token representations to continuous actions in parallel.</p></article>
       </div>
     </section>
 
-    <section class="section hero is-light" id="demonstrations">
-      <div class="hero-body">
-        <div class="container is-max-widescreen demo-section">
-          <div class="has-text-centered section-header">
-            <h2 class="title is-3">Demonstrations</h2>
-          </div>
-
-          <div class="demo-task">
-            <p class="demo-instruction-meta">Instruction</p>
-            <h3 class="demo-instruction">Pick up and place the banana and carrot into the plate</h3>
-            <div class="demo-grid">
-              <article class="demo-card">
-                <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/banana_plate_baseline_poster.jpg">
-                  <source src="static/videos/banana_plate_baseline_3x.mp4" type="video/mp4">
-                </video>
-                <p class="demo-label">Baseline</p>
-              </article>
-
-              <article class="demo-card">
-                <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/banana_plate_cluttered_scene_poster.jpg">
-                  <source src="static/videos/banana_plate_cluttered_scene_3x.mp4" type="video/mp4">
-                </video>
-                <p class="demo-label">Cluttered Scene</p>
-              </article>
-
-              <article class="demo-card">
-                <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/banana_plate_visual_distraction_poster.jpg">
-                  <source src="static/videos/banana_plate_visual_distraction_3x.mp4" type="video/mp4">
-                </video>
-                <p class="demo-label">Visual Distraction</p>
-              </article>
-            </div>
-          </div>
-
-          <div class="demo-task">
-            <p class="demo-instruction-meta">Instruction</p>
-            <h3 class="demo-instruction">Pour Cola</h3>
-            <div class="demo-grid">
-              <article class="demo-card">
-                <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/pour_cola_baseline_poster.jpg">
-                  <source src="static/videos/pour_cola_baseline_3x.mp4" type="video/mp4">
-                </video>
-                <p class="demo-label">Baseline</p>
-              </article>
-
-              <article class="demo-card">
-                <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/pour_cola_cluttered_scene_poster.jpg">
-                  <source src="static/videos/pour_cola_cluttered_scene_3x.mp4" type="video/mp4">
-                </video>
-                <p class="demo-label">Cluttered Scene</p>
-              </article>
-
-              <article class="demo-card">
-                <video class="demo-video" controls playsinline autoplay muted loop preload="metadata" poster="static/images/pour_cola_visual_distraction_poster.jpg">
-                  <source src="static/videos/pour_cola_visual_distraction_3x.mp4" type="video/mp4">
-                </video>
-                <p class="demo-label">Visual Distraction</p>
-              </article>
-            </div>
-          </div>
-        </div>
+    <section class="results-section" id="results"><div class="section-shell">
+      <div class="section-heading"><div><h2>From simulation to real robots.</h2><p>Stronger visual grounding supports precise and multi-stage manipulation.</p></div><span class="section-name">Results</span></div>
+      <div class="results-grid">
+        <article class="result-panel"><div class="result-title"><h3>RLBench</h3><div><strong>83<span>%</span></strong><span>mean success</span></div></div><p class="result-description">Ten manipulation tasks, including closing containers, sweeping, tool handling and watering plants.</p><div class="benchmark-bars" id="rlbench-bars" aria-label="RLBench mean success rates"></div><details class="task-details"><summary>View the ten tasks</summary><p>Close box · Close laptop lid · Toilet seat down · Sweep to dustpan · Close fridge · Phone on base · Umbrella out · Frame off hanger · Wine at rack · Water plants</p></details></article>
+        <article class="result-panel"><div class="result-title"><h3>Real-world manipulation</h3><div><strong>89.4<span>%</span></strong><span>mean success</span></div></div><p class="result-description">Fruit pick-and-place, can stacking, writing, pouring, and bimanual flower transfer.</p><div class="benchmark-bars" id="real-bars" aria-label="Real-world mean success rates"></div><div class="real-tasks"><img src="static/images/banana_plate_baseline_poster.jpg" alt="Robot picking fruit onto a plate" loading="lazy"><img src="static/images/pour_cola_baseline_poster.jpg" alt="Robot pouring cola" loading="lazy"></div><p class="result-insight">Visual detail matters for both contact precision and the later steps of a task.</p></article>
       </div>
+      <p class="figure-note">Success rates reported in the paper, Tables 1–2. Real-world mean averages the eight reported atomic task/step entries.</p>
+      <details class="ablation-details"><summary><span>What makes the design work?</span><span>Explore the ablations <span aria-hidden="true">+</span></span></summary><div class="ablation-content"><figure><button class="figure-button" data-lightbox="static/images/ablation-final.png" aria-label="Expand controlled ablation studies"><img src="static/images/ablation-final.png" alt="Four controlled ablations: visual integration, expert features, pruning guidance, and reference attention layers" loading="lazy"></button></figure><p><strong>Deep visual fusion and late DINOv3 features work best in the controlled study.</strong> Action-conditioned pruning preserves useful regions, while averaging shallow attention layers gives a stronger cue than a single layer.</p><p class="figure-note">Controlled ablations use a separate protocol from the main results; see the paper for the full comparison.</p></div></details>
+    </div></section>
+
+    <section class="section-shell demos-section" id="demonstrations">
+      <div class="section-heading"><div><h2>See the robot in action.</h2><p>Manipulation under clutter and visual distraction.</p></div><span class="section-name">Demonstrations</span></div>
+      <div class="demo-tabs" role="tablist" aria-label="Choose a demonstrated task"><button role="tab" id="tab-fruit" aria-selected="true" aria-controls="panel-fruit" tabindex="0">Pick and place</button><button role="tab" id="tab-pour" aria-selected="false" aria-controls="panel-pour" tabindex="-1">Pour cola</button></div>
+      <div id="panel-fruit" role="tabpanel" aria-labelledby="tab-fruit"><p class="demo-instruction">“Pick up and place the banana and carrot into the plate.”</p><div class="demo-grid">
+        <figure><video controls playsinline muted loop preload="none" poster="static/images/banana_plate_baseline_poster.jpg"><source src="static/videos/banana_plate_baseline_3x.mp4" type="video/mp4"></video><figcaption>Standard scene</figcaption></figure>
+        <figure><video controls playsinline muted loop preload="none" poster="static/images/banana_plate_cluttered_scene_poster.jpg"><source src="static/videos/banana_plate_cluttered_scene_3x.mp4" type="video/mp4"></video><figcaption>Cluttered scene</figcaption></figure>
+        <figure><video controls playsinline muted loop preload="none" poster="static/images/banana_plate_visual_distraction_poster.jpg"><source src="static/videos/banana_plate_visual_distraction_3x.mp4" type="video/mp4"></video><figcaption>Visual distraction</figcaption></figure>
+      </div></div>
+      <div id="panel-pour" role="tabpanel" aria-labelledby="tab-pour" hidden><p class="demo-instruction">“Pour cola.”</p><div class="demo-grid">
+        <figure><video controls playsinline muted loop preload="none" poster="static/images/pour_cola_baseline_poster.jpg"><source src="static/videos/pour_cola_baseline_3x.mp4" type="video/mp4"></video><figcaption>Standard scene</figcaption></figure>
+        <figure><video controls playsinline muted loop preload="none" poster="static/images/pour_cola_cluttered_scene_poster.jpg"><source src="static/videos/pour_cola_cluttered_scene_3x.mp4" type="video/mp4"></video><figcaption>Cluttered scene</figcaption></figure>
+        <figure><video controls playsinline muted loop preload="none" poster="static/images/pour_cola_visual_distraction_poster.jpg"><source src="static/videos/pour_cola_visual_distraction_3x.mp4" type="video/mp4"></video><figcaption>Visual distraction</figcaption></figure>
+      </div></div>
+      <p class="figure-note">DeepVision-VLA in three scene conditions. Demonstration videos are shown at 3× speed.</p>
     </section>
 
-    <section class="section" id="BibTeX">
-      <div class="container is-max-desktop content">
-        <div class="bibtex-header">
-          <h2 class="title">BibTeX</h2>
-          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-            <i class="fas fa-copy"></i>
-            <span class="copy-text">Copy</span>
-          </button>
-        </div>
-        <pre id="bibtex-code"><code>@misc{luo2026lookactingenhancingvision,
+    <section class="citation-section" id="BibTeX"><div class="section-shell citation-grid"><div><h2>Build on DeepVision-VLA.</h2><p>Read the paper, explore the released inference and evaluation code, or try the RLBench-10 checkpoint.</p><div class="citation-links"><a href="https://github.com/yulin-luo/deepvision-vla" target="_blank" rel="noopener noreferrer">GitHub repository</a><a href="https://huggingface.co/lyl010221-pku/deepvision-vla-rlbench10" target="_blank" rel="noopener noreferrer">Model checkpoint</a></div></div><div class="citation-box"><div class="citation-header"><h3>arXiv citation</h3><button id="copy-citation" type="button">Copy BibTeX</button></div><pre><code id="bibtex-code">@misc{luo2026lookactingenhancingvision,
   title={Look Before Acting: Enhancing Vision Foundation Representations for Vision-Language-Action Models},
   author={Yulin Luo and Hao Chen and Zhuangzhe Wu and Bowen Sui and Jiaming Liu and Chenyang Gu and Zhuoyang Liu and Qiuxuan Feng and Jiale Yu and Shuo Gu and Peng Jia and Pheng-Ann Heng and Shanghang Zhang},
   year={2026},
@@ -326,23 +212,9 @@
   archivePrefix={arXiv},
   primaryClass={cs.CV},
   url={https://arxiv.org/abs/2603.15618}
-}</code></pre>
-      </div>
-    </section>
+}</code></pre><span id="copy-status" class="visually-hidden" aria-live="polite"></span></div></div></section>
   </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This page was adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a>, which was adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener noreferrer">Nerfies</a> project page. The website source remains under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <footer class="section-shell site-footer"><div class="footer-brand"><img src="static/images/deepvision-mark.svg" width="28" height="28" alt=""><strong>DeepVision-VLA</strong><a href="#top">Back to top</a></div><p>Adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a> and <a href="https://nerfies.github.io" target="_blank" rel="noopener noreferrer">Nerfies</a>. Website source: <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license" target="_blank">CC BY-SA 4.0</a>.</p></footer>
+  <dialog id="figure-dialog" aria-label="Expanded research figure"><button type="button" id="close-figure" aria-label="Close expanded figure">Close <span aria-hidden="true">×</span></button><img id="expanded-figure" alt=""></dialog>
 </body>
 </html>
