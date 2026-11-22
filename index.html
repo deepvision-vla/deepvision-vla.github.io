@@ -62,7 +62,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/site.css?v=20261113-authors-news">
+  <link rel="stylesheet" href="static/css/site.css?v=20261122-release-news">
   <script defer src="static/js/site.js"></script>
 
   <script type="application/ld+json">
@@ -115,7 +115,7 @@
   <header class="site-header">
     <div class="nav-shell">
       <a class="brand" href="#top" aria-label="DeepVision-VLA home"><img src="static/images/deepvision-mark.svg" width="34" height="34" alt=""><span>DeepVision-VLA</span></a>
-      <nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#diagnosis">Diagnosis</a><a href="#method">Method</a><a href="#results">Results</a><a href="#demonstrations">Demos</a></nav>
+      <nav aria-label="Main navigation"><a href="#news">News</a><a href="#overview">Overview</a><a href="#diagnosis">Diagnosis</a><a href="#method">Method</a><a href="#results">Results</a><a href="#demonstrations">Demos</a></nav>
       <a class="nav-code" href="https://github.com/yulin-luo/deepvision-vla" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a>
     </div>
   </header>
@@ -133,12 +133,12 @@
           </div>
           <p class="intro-summary">Bring task-relevant visual detail into deeper action layers, so robots stay grounded in what they see.</p>
           <div class="resource-links" aria-label="Project resources">
-            <a class="button button-primary" href="https://dl.acm.org/doi/10.1145/3767308.3835774" target="_blank" rel="noopener noreferrer">Read the paper</a>
-            <a class="button" href="https://github.com/yulin-luo/deepvision-vla" target="_blank" rel="noopener noreferrer">Code</a>
-            <a class="button" href="https://huggingface.co/lyl010221-pku/deepvision-vla-rlbench10" target="_blank" rel="noopener noreferrer">Model</a>
+            <a class="button button-primary" href="https://arxiv.org/abs/2603.15618" target="_blank" rel="noopener noreferrer">arXiv preprint</a>
+            <a class="button" href="https://dl.acm.org/doi/10.1145/3767308.3835774" target="_blank" rel="noopener noreferrer" aria-label="Official paper in the ACM Multimedia proceedings">ACM MM paper</a>
+            <a class="button" href="https://huggingface.co/lyl010221-pku/deepvision-vla-rlbench10" target="_blank" rel="noopener noreferrer">RLBench-10</a>
             <a class="button" href="static/pdfs/deepvision-vla-acmmm2026-poster.pdf" target="_blank" rel="noopener noreferrer">Poster</a>
           </div>
-          <div class="secondary-links"><a href="https://arxiv.org/abs/2603.15618" target="_blank" rel="noopener noreferrer">arXiv preprint</a><a href="#BibTeX">Cite this work</a></div>
+          <div class="secondary-links"><a href="#BibTeX">Cite this work</a></div>
         </div>
         <figure class="hero-demo">
           <div class="video-focus">
@@ -150,7 +150,20 @@
           <figcaption><span class="live-dot" aria-hidden="true"></span>Visual grounding for precise manipulation<a href="#demonstrations">Explore the demos</a></figcaption>
         </figure>
       </div>
-      <aside class="release-note" aria-labelledby="news-title"><h2 class="news-label" id="news-title">News</h2><p><strong>Inference and evaluation are open.</strong> Get the code and RLBench-10 checkpoint. Training code and embodied-pretraining weights will follow.</p><a href="https://github.com/yulin-luo/deepvision-vla" target="_blank" rel="noopener noreferrer">Get started</a></aside>
+    </section>
+
+    <section class="project-news section-shell" id="news" aria-labelledby="news-title">
+      <h2 id="news-title">News</h2>
+      <ul class="news-list">
+        <li>
+          <time datetime="2026-11-22">Nov 22, 2026</time>
+          <p>Released the <a href="https://huggingface.co/datasets/lyl010221-pku/deepvision-vla-bridgev2-roi" target="_blank" rel="noopener noreferrer">BridgeV2 ROI dataset</a>, <a href="https://huggingface.co/lyl010221-pku/deepvision-vla-qwenvla-oft-h16" target="_blank" rel="noopener noreferrer">QwenVLA-OFT H16 baseline</a>, and <a href="https://github.com/yulin-luo/deepvision-vla/blob/main/docs/diagnostics/QUICKSTART.md" target="_blank" rel="noopener noreferrer">reproduction code</a>.</p>
+        </li>
+        <li>
+          <time datetime="2026-11-11">Nov 11, 2026</time>
+          <p>Released inference and evaluation code with the <a href="https://huggingface.co/lyl010221-pku/deepvision-vla-rlbench10" target="_blank" rel="noopener noreferrer">RLBench-10 checkpoint</a>.</p>
+        </li>
+      </ul>
     </section>
 
     <section class="section-shell overview" id="overview">
@@ -204,7 +217,7 @@
       <p class="figure-note">DeepVision-VLA in three scene conditions. Demonstration videos are shown at 3× speed.</p>
     </section>
 
-    <section class="citation-section" id="BibTeX"><div class="section-shell citation-grid"><div><h2>Build on DeepVision-VLA.</h2><p>Read the paper, explore the released inference and evaluation code, or try the RLBench-10 checkpoint.</p><div class="citation-links"><a href="https://github.com/yulin-luo/deepvision-vla" target="_blank" rel="noopener noreferrer">GitHub repository</a><a href="https://huggingface.co/lyl010221-pku/deepvision-vla-rlbench10" target="_blank" rel="noopener noreferrer">Model checkpoint</a></div></div><div class="citation-box"><div class="citation-header"><h3>arXiv citation</h3><button id="copy-citation" type="button">Copy BibTeX</button></div><pre><code id="bibtex-code">@misc{luo2026lookactingenhancingvision,
+    <section class="citation-section" id="BibTeX"><div class="section-shell citation-grid"><div><h2>Build on DeepVision-VLA.</h2><p>Browse the BridgeV2 data, model checkpoints, and diagnostic results.</p><div class="citation-links"><a href="https://huggingface.co/collections/lyl010221-pku/deepvision-vla-6b030965d2acd95487d39617" target="_blank" rel="noopener noreferrer">Hugging Face collection</a></div></div><div class="citation-box"><div class="citation-header"><h3>arXiv citation</h3><button id="copy-citation" type="button">Copy BibTeX</button></div><pre><code id="bibtex-code">@misc{luo2026lookactingenhancingvision,
   title={Look Before Acting: Enhancing Vision Foundation Representations for Vision-Language-Action Models},
   author={Yulin Luo and Hao Chen and Zhuangzhe Wu and Bowen Sui and Jiaming Liu and Chenyang Gu and Zhuoyang Liu and Qiuxuan Feng and Jiale Yu and Shuo Gu and Peng Jia and Pheng-Ann Heng and Shanghang Zhang},
   year={2026},

@@ -28,3 +28,10 @@ The result charts and updated figures use the final camera-ready paper. The exis
 ## Attribution
 
 Originally adapted from the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template) and [Nerfies](https://nerfies.github.io/). Website source is shared under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+## Project resources
+
+- [arXiv preprint](https://arxiv.org/abs/2603.15618)
+- [ACM Multimedia paper](https://dl.acm.org/doi/10.1145/3767308.3835774)
+- [Source code and BridgeV2 reproduction guide](https://github.com/yulin-luo/deepvision-vla/blob/main/docs/diagnostics/QUICKSTART.md)
+- [Datasets and model checkpoints](https://huggingface.co/collections/lyl010221-pku/deepvision-vla-6b030965d2acd95487d39617)
