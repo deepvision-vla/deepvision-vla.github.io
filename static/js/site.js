@@ -61,11 +61,4 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('copy-status').textContent = 'Citation selected. Press Control+C or Command+C to copy.';
     }
   });
-  const hero = document.getElementById('hero-video');
-  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (entry.isIntersecting) hero.play().catch(() => {}); else hero.pause();
-    }), {threshold: .3});
-    observer.observe(hero);
-  }
 });
