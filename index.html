@@ -62,7 +62,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/site.css?v=20261123-wide-method">
+  <link rel="stylesheet" href="static/css/site.css?v=20261123-media-sizing">
   <script defer src="static/js/site.js?v=20261123-method-video"></script>
 
   <script type="application/ld+json">
@@ -155,7 +155,7 @@
         <ul class="news-list">
           <li>
             <time datetime="2026-11-23">Nov 23, 2026</time>
-            <p>Added <a href="#pi0-base">official π₀ base diagnostic curves</a> and reproduction instructions for 150 BridgeData V2 episodes.</p>
+            <p>Added <a href="https://github.com/yulin-luo/deepvision-vla/blob/main/docs/diagnostics/PI0_BASE.md">π₀ base curves and reproduction instructions</a> for 150 BridgeData V2 episodes.</p>
           </li>
           <li>
             <time datetime="2026-11-22">Nov 22, 2026</time>
@@ -178,19 +178,9 @@
     <section class="diagnosis-section" id="diagnosis">
       <div class="section-shell">
         <div class="section-heading"><div><h2>Where does visual grounding weaken?</h2><p>Looking inside OpenVLA, π₀ and QwenVLA-OFT.</p></div><span class="section-name">Diagnosis</span></div>
-        <figure class="research-figure"><button class="figure-button" data-lightbox="static/images/diagnosis-final.png" aria-label="Expand visual sensitivity curves and contribution maps"><img src="static/images/diagnosis-final.png" alt="Paper analysis of visual-token masking sensitivity and gradient-based visual contribution across VLA layers" loading="lazy"></button><figcaption>Layer-wise ROI masking and visual contribution maps from the paper. Click the figure to inspect the details.</figcaption></figure>
+        <figure class="research-figure" id="pi0-base"><button class="figure-button" data-lightbox="static/images/diagnosis-final.png" aria-label="Expand visual sensitivity curves and contribution maps"><img src="static/images/diagnosis-final.png" alt="Paper analysis of visual-token masking sensitivity and gradient-based visual contribution across VLA layers" loading="lazy"></button><figcaption>Layer-wise ROI masking and visual contribution maps from the paper. Click the figure to inspect the details.</figcaption></figure>
         <div class="diagnosis-findings"><div><h3>Shallow layers use visual evidence.</h3><p>Masking task-region tokens in shallow layers causes a larger increase in action error.</p></div><div><h3>Deep layers become less grounded.</h3><p>Visual contribution becomes less task-focused, while masking has a smaller effect.</p></div></div>
         <p class="design-response"><strong>The design response:</strong> reinforce useful visual evidence where action prediction becomes less sensitive to it.</p>
-        <section class="pi0-reproduction" id="pi0-base" aria-labelledby="pi0-base-title">
-          <h3 id="pi0-base-title">Official π₀ base reproduction</h3>
-          <figure class="research-figure">
-            <button class="figure-button" data-lightbox="static/images/pi0-base-bridgev2.png" aria-label="Expand the official Pi0 base masking curves">
-              <img src="static/images/pi0-base-bridgev2.png" width="1632" height="960" alt="Official Pi0 base on 150 BridgeData V2 episodes. Layers 0 and 6 show greater normalized prediction drift than layers 12 and 16." loading="lazy">
-            </button>
-            <figcaption>ROI masking on 150 BridgeData V2 episodes with the official LeRobot π₀ base checkpoint. The curves measure prediction drift relative to the unmasked output.</figcaption>
-          </figure>
-          <a class="pi0-guide" href="https://github.com/yulin-luo/deepvision-vla/blob/main/docs/diagnostics/PI0_BASE.md">Reproduce the π₀ base curves</a>
-        </section>
       </div>
     </section>
 
@@ -211,7 +201,7 @@
         <article class="result-panel"><div class="result-title"><h3>Real-world manipulation</h3><div><strong>89.4<span>%</span></strong><span>mean success</span></div></div><p class="result-description">Fruit pick-and-place, can stacking, writing, pouring, and bimanual flower transfer.</p><div class="benchmark-bars" id="real-bars" aria-label="Real-world mean success rates"></div><div class="real-tasks"><img src="static/images/banana_plate_baseline_poster.jpg" alt="Robot picking fruit onto a plate" loading="lazy"><img src="static/images/pour_cola_baseline_poster.jpg" alt="Robot pouring cola" loading="lazy"></div><p class="result-insight">Visual detail matters for both contact precision and the later steps of a task.</p></article>
       </div>
       <p class="figure-note">Success rates reported in the paper, Tables 1–2. Real-world mean averages the eight reported atomic task/step entries.</p>
-      <details class="ablation-details"><summary><span>What makes the design work?</span><span>Explore the ablations <span aria-hidden="true">+</span></span></summary><div class="ablation-content"><figure><button class="figure-button" data-lightbox="static/images/ablation-final.png" aria-label="Expand controlled ablation studies"><img src="static/images/ablation-final.png" alt="Four controlled ablations: visual integration, expert features, pruning guidance, and reference attention layers" loading="lazy"></button></figure><p><strong>Deep visual fusion and late DINOv3 features work best in the controlled study.</strong> Action-conditioned pruning preserves useful regions, while averaging shallow attention layers gives a stronger cue than a single layer.</p><p class="figure-note">Controlled ablations use a separate protocol from the main results; see the paper for the full comparison.</p></div></details>
+      <details class="ablation-details" open><summary><span>Ablation studies</span><span class="ablation-toggle" aria-hidden="true"><span class="ablation-show">Show studies</span><span class="ablation-hide">Hide studies</span></span></summary><div class="ablation-content"><figure><button class="figure-button" data-lightbox="static/images/ablation-final.png" aria-label="Expand controlled ablation studies"><img src="static/images/ablation-final.png?v=20261123-expanded" alt="Four controlled ablations: visual integration, expert features, pruning guidance, and reference attention layers" width="4000" height="1158" decoding="async"></button></figure><p><strong>Deep visual fusion and late DINOv3 features work best in the controlled study.</strong> Action-conditioned pruning preserves useful regions, while averaging shallow attention layers gives a stronger cue than a single layer.</p><p class="figure-note">Controlled ablations use a separate protocol from the main results; see the paper for the full comparison.</p></div></details>
     </div></section>
 
     <section class="section-shell demos-section" id="demonstrations">
