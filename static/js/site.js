@@ -47,6 +47,36 @@ document.addEventListener('DOMContentLoaded', () => {
   }));
   document.getElementById('close-figure').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  const nav = document.querySelector('.site-header nav');
+  const navLinks = [...nav.querySelectorAll('a[href^="#"]')];
+  const targets = navLinks.map(link => document.querySelector(link.getAttribute('href')));
+  let navFrame = 0;
+  let lastCurrent = -2;
+  function updateNav() {
+    navFrame = 0;
+    const offset = document.querySelector('.site-header').offsetHeight + 40;
+    let current = -1;
+    targets.forEach((target, index) => { if (target && target.getBoundingClientRect().top <= offset) current = index; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) current = targets.length - 1;
+    navLinks.forEach((link, index) => {
+      const active = index === current;
+      link.classList.toggle('active', active);
+      if (active) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
+    });
+    const scrollable = nav.scrollWidth > nav.clientWidth + 2;
+    nav.classList.toggle('can-scroll', scrollable && nav.scrollLeft + nav.clientWidth < nav.scrollWidth - 2);
+    if (scrollable && current >= 0 && current !== lastCurrent) {
+      const link = navLinks[current];
+      const left = link.offsetLeft - nav.offsetLeft;
+      if (left < nav.scrollLeft || left + link.offsetWidth > nav.scrollLeft + nav.clientWidth) nav.scrollLeft = left - 18;
+    }
+    lastCurrent = current;
+  }
+  const requestNavUpdate = () => { if (!navFrame) navFrame = requestAnimationFrame(updateNav); };
+  window.addEventListener('scroll', requestNavUpdate, { passive: true });
+  window.addEventListener('resize', requestNavUpdate);
+  nav.addEventListener('scroll', requestNavUpdate, { passive: true });
+  updateNav();
   const copy = document.getElementById('copy-citation');
   copy.addEventListener('click', async () => {
     try {
